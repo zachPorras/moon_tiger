@@ -15,8 +15,9 @@ KITTY_WIDTH = 65
 KITTY_HEIGHT = 65
 EVIL_SHIP_WIDTH = 55
 EVIL_SHIP_HEIGHT = 40
-kitty_orientation = 'Left'
-
+pygame.mixer.init()
+MUSIC = pygame.mixer.music.load('Assets/music/shes_a_lady.wav')
+pygame.mixer.music.play(-1)
 
 KITTY_IMAGE = pygame.image.load(
     os.path.join('Assets', 'kitty.png'))
@@ -54,6 +55,9 @@ def main():
     # rectangle (moveable object position) instantiations
     evil_ship = pygame.Rect(70, 200, EVIL_SHIP_WIDTH, EVIL_SHIP_HEIGHT)
     kitty = pygame.Rect(650, 200, KITTY_HEIGHT, KITTY_WIDTH)
+
+    # bring in the music
+
 
     # game speed
     clock = pygame.time.Clock()
