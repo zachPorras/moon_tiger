@@ -12,17 +12,20 @@ FPS = 60
 
 KITTY_IMAGE = pygame.image.load(
     os.path.join('Assets', 'kitty.png'))
-# KITTY_IMAGE = pygame.transform.scale(KITTY_IMAGE, (55, 40))
-# KITTY_IMAGE = pygame.transform.flip(KITTY_IMAGE, flip_y=True, flip_x=True)
-RED_SPACESHIP_IMAGE = pygame.image.load(
+KITTY_IMAGE = pygame.transform.flip(
+    KITTY_IMAGE, flip_y=False, flip_x=True)
+RED_SHIP_IMAGE = pygame.image.load(
     os.path.join('Assets', 'spaceship_red.png'))
+RED_SHIP_IMAGE = pygame.transform.rotate(pygame.transform.scale(
+    RED_SHIP_IMAGE, (55, 40)), 90)
 
 
 
 def draw_window():
     WIN.fill(BACKGROUND)
     # draw surfaces (text or images) onto screen
-    WIN.blit(KITTY_IMAGE, (300, 100))
+    WIN.blit(KITTY_IMAGE, (650, 200))
+    WIN.blit(RED_SHIP_IMAGE, (200, 200))
     pygame.display.update()
 
 
