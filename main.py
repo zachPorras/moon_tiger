@@ -1,5 +1,6 @@
 import pygame
 import os
+import random
 
 
 WIDTH, HEIGHT = 900, 500
@@ -16,7 +17,16 @@ KITTY_HEIGHT = 65
 EVIL_SHIP_WIDTH = 55
 EVIL_SHIP_HEIGHT = 40
 pygame.mixer.init()
-MUSIC = pygame.mixer.music.load('Assets/music/shes_a_lady.wav')
+SONGS = [
+    'Assets/music/shes_a_lady.wav',
+    'Assets/music/stayin_alive.wav',
+    'Assets/music/get_down_tonight.wav',
+    'Assets/music/night_fever.wav'
+]
+rando = random.randint(0, len(SONGS)-1)
+MUSIC = pygame.mixer.music.load(
+    SONGS[rando])
+pygame.mixer.music.set_volume(0.05)
 pygame.mixer.music.play(-1)
 
 KITTY_IMAGE = pygame.image.load(
