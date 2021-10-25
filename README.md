@@ -1,6 +1,6 @@
 # Moon Tiger Space Boogie
 
-<em>The funky-slunky-chaotic adventures of a moon tiger named Mani.</em>
+<em>The funky-slunky interstellar adventures of a moon tiger named Mani.</em>
 
 <br>
 
